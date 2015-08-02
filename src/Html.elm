@@ -21,7 +21,7 @@ expect to use frequently will be closer to the top.
 @docs ol, ul, li, dl, dt, dd
 
 # Emdedded Content
-@docs img, iframe, canvas, svg, math
+@docs img, link, iframe, canvas, svg, math
 
 # Inputs
 @docs form, input, textarea, button, select, option
@@ -544,6 +544,12 @@ del =
 img : List Attribute -> List Html -> Html
 img =
   node "img"
+
+
+{-| Represents an external resource, generally a stylesheet. -}
+link : List Attribute -> List Html -> Html
+link =
+  node "link"
 
 
 {-| Embedded an HTML document. -}
